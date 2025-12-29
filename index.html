@@ -6,28 +6,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <script>
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.querySelector('.lightbox-img');
-const closeBtn = document.querySelector('.close');
-
-document.querySelectorAll('.zoomable').forEach(img => {
-    img.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = img.src;
-    });
-});
-
-closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-
-lightbox.addEventListener('click', e => {
-    if(e.target !== lightboxImg && e.target !== closeBtn){
-        lightbox.style.display = 'none';
-    }
-});
-</script>
     
 <header>
     <h1>أعمالي</h1>
@@ -72,6 +50,7 @@ lightbox.addEventListener('click', e => {
 </body>
 
 </html>
+
 
 
 
