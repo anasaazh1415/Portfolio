@@ -50,6 +50,35 @@ footer {
 
     padding: 15px;
 
+/* تكبير الصور */
+.zoomable {
+    cursor: pointer;
+}
+
+/* نافذة التكبير */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
 
 
 
