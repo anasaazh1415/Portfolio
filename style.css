@@ -50,28 +50,32 @@ footer {
 
     padding: 15px;
 
-/* تكبير الصور */
-.zoomable {
-    cursor: pointer;
+/* الصورة القابلة للتكبير */
+.popup-img {
+    cursor: zoom-in;
 }
 
 /* نافذة التكبير */
-#lightbox {
+#popup {
     display: none;
     position: fixed;
-    z-index: 999;
     inset: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#lightbox img {
+/* الصورة داخل النافذة */
+#popup-image {
     max-width: 90%;
     max-height: 90%;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
-#close {
+/* زر الإغلاق */
+#popup-close {
     position: absolute;
     top: 20px;
     right: 30px;
