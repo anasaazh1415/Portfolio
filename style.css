@@ -83,6 +83,15 @@ footer {
     cursor: pointer;
 }
 
+/* حماية الصور */
+.popup-img,
+.card img,
+#popup-image {
+    -webkit-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    pointer-events: none;
+}
 
 
 
