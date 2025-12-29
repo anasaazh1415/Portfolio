@@ -93,6 +93,14 @@ footer {
     pointer-events: none;
 }
 
+.img-box {
+    position: relative;
+    cursor: zoom-in;
+}
+
+.img-box img {
+    pointer-events: none; /* يمنع السحب والنسخ */
+}
 
 
 
