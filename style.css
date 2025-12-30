@@ -103,10 +103,21 @@ footer {
  user-select: none;
  -webkit-user-drag: none;
 }
+.img-box {
+    touch-action: manipulation;
+}
 
+#popup-image {
+    max-width: 95%;
+    max-height: 85%;
+    border-radius: 8px;
+}
 
-
-
+#popup-close {
+    top: 15px;
+    right: 20px;
+    padding: 10px;
+}
 
 
 
