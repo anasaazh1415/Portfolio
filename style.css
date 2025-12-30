@@ -99,8 +99,11 @@ footer {
 }
 
 .img-box img {
-    pointer-events: none; /* يمنع السحب والنسخ */
+ pointer-events: none; /* يمنع السحب والنسخ */
+ user-select: none;
+ -webkit-user-drag: none;
 }
+
 
 
 
