@@ -43,34 +43,31 @@
 </div>   
     
 <script>
-const popup = document.getElementById("popup");
-const popupImg = document.getElementById("popup-image");
-const closeBtn = document.getElementById("popup-close");
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("popup");
+    const popupImg = document.getElementById("popup-image");
+    const closeBtn = document.getElementById("popup-close");
 
-document.querySelectorAll(".popup-img").forEach(img => {
-    img.onclick = () => {
-        popup.style.display = "flex";
-        popupImg.src = img.src;
-        document.body.style.overflow = "hidden";
+    document.querySelectorAll(".img-box").forEach(box => {
+        box.addEventListener("click", () => {
+            const img = box.querySelector("img");
+            popup.style.display = "flex";
+            popupImg.src = img.src;
+        });
+    });
+
+    closeBtn.onclick = () => popup.style.display = "none";
+
+    popup.onclick = e => {
+        if (e.target === popup) popup.style.display = "none";
     };
 });
-
-closeBtn.onclick = () => {
-    popup.style.display = "none";
-    document.body.style.overflow = "auto";
-};
-
-popup.onclick = (e) => {
-    if (e.target === popup) {
-        popup.style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-};
 </script>
     
 </body>
 
 </html>
+
 
 
 
