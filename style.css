@@ -20,7 +20,7 @@ header {
     padding: 30px;
 }
 
-.card {
+.img-box {
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -28,17 +28,17 @@ header {
     text-align: center;
 }
 
-.card img {
+.img-box img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.card h3 {
+.img-box h3 {
     margin: 10px 0 5px;
 }
 
-.card p {
+.img-box p {
     color: #555;
     padding-bottom: 15px;
 }
@@ -85,7 +85,7 @@ footer {
 
 /* حماية الصور */
 .popup-img,
-.card img,
+.img-box img,
 #popup-image {
     -webkit-user-drag: none;
     user-drag: none;
@@ -103,6 +103,7 @@ footer {
  user-select: none;
  -webkit-user-drag: none;
 }
+
 
 
 
