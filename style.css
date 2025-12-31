@@ -133,7 +133,7 @@ footer {
     header p {
         font-size: 14px;
     }
-}
+
 /* الحاوية العامة */
 .cta-wrapper {
   display: flex;
@@ -181,3 +181,4 @@ footer {
     padding-bottom: 90px; /* يمنع تغطية المحتوى */
   }
 }
+
