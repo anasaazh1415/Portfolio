@@ -133,18 +133,18 @@ footer {
     header p {
         font-size: 14px;
     }
-/* الحاوية العامة للزر */
+/* الحاوية العامة للزر - لكل الشاشات */
 .cta-wrapper {
-display: flex; /* مهم ليظهر بشكل صحيح */
+display: flex; /* مهم جدًا ليظهر كزر */
 justify-content: center; /* وسط الصفحة */
 margin: 40px 0;
-position: relative; /* لضمان ظهور الزر فوق العناصر */
+position: relative; /* لضمان ظهور فوق العناصر */
 z-index: 1000; /* أعلى من الصور */
 }
 
-/* الزر */
+/* الزر - لكل الشاشات */
 .cta-btn {
-display: inline-block; /* مهم جداً ليظهر كزر */
+display: inline-block; /* مهم جدًا ليظهر كزر */
 background: linear-gradient(135deg, #2563eb, #1e40af);
 color: #fff;
 padding: 14px 32px;
@@ -161,7 +161,7 @@ transform: translateY(-3px);
 box-shadow: 0 15px 30px rgba(37, 99, 235, 0.5);
 }
 
-/* الجوال */
+/* تعديلات الجوال */
 @media (max-width: 768px) {
 .cta-wrapper {
 position: fixed; /* ثابت أسفل الشاشة */
@@ -181,3 +181,4 @@ body {
 padding-bottom: 90px; /* يمنع تغطية المحتوى */
 }
 }
+
