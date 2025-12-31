@@ -136,11 +136,31 @@ footer {
 }
 /* الحاوية العامة */
 .cta-wrapper {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: 40px 0;
 }
 
-/* زر الجوال */
+/* الزر العام */
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.5);
+}
+
+/* للجوال */
 @media (max-width: 768px) {
   .cta-wrapper {
     position: fixed;
@@ -158,6 +178,6 @@ footer {
   }
 
   body {
-    padding-bottom: 90px;
+    padding-bottom: 90px; /* يمنع تغطية المحتوى */
   }
 }
