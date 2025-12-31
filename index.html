@@ -1,75 +1,74 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>أعمالي | أنس</title>
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أعمالي | أنس</title>
+<link rel="stylesheet" href="style.css">
 </head>
-    
-    <body oncontextmenu="return false;">
+<body oncontextmenu="return false;">
+
 <header>
-      
-    <h1>أعمالي</h1>
-    <p>مصمم جرافيك | فوتوشوب</p>
+<h1>أعمالي</h1>
+<p>مصمم جرافيك | فوتوشوب</p>
 </header>
-          <div class="cta-wrapper">
-  <a href="https://wa.me/966551712933" class="cta-btn">
-    اطلب تصميم
-  </a>
+
+<!-- زر CTA -->
+<div class="cta-wrapper">
+<a href="https://wa.me/966551712933" class="cta-btn">
+اطلب تصميم
+</a>
 </div>
 
-        
 <section class="portfolio">
-    <div class="img-box">
-        <img src="Logo1.jpg" alt="عمل 1" class="popup-img">
-        <h3>تصميم شعار</h3>
-        <p>شعار احترافي لمتجر السرعة الرقمية الإلكتروني</p>
-    </div>
+<div class="img-box">
+<img src="Logo1.jpg" alt="عمل 1" class="popup-img">
+<h3>تصميم شعار</h3>
+<p>شعار احترافي لمتجر السرعة الرقمية الإلكتروني</p>
+</div>
 
-    <div class="img-box">
-        <img src="design1.jpg" alt="عمل 2" class="popup-img">
-        <h3>تصميم انفوجرافيك</h3>
-        <p>لوحة انفوجرافيك</p>
-    </div>
+<div class="img-box">
+<img src="design1.jpg" alt="عمل 2" class="popup-img">
+<h3>تصميم انفوجرافيك</h3>
+<p>لوحة انفوجرافيك</p>
+</div>
 
-    <div class="img-box">
-        <img src="wedding3.jpg" alt="عمل 3"class="popup-img">
-        <h3>تصميم دعوات</h3>
-        <p>تصميم دعوة زواج</p>
-    </div>
+<div class="img-box">
+<img src="wedding3.jpg" alt="عمل 3" class="popup-img">
+<h3>تصميم دعوات</h3>
+<p>تصميم دعوة زواج</p>
+</div>
 </section>
 
 <footer>
-    <p>© 2025 أنس – جميع الحقوق محفوظة</p>
+<p>©️ 2025 أنس – جميع الحقوق محفوظة</p>
 </footer>
-    
- <!-- نافذة منبثقة لتكبير الصور -->
+
+<!-- نافذة منبثقة لتكبير الصور -->
 <div id="popup">
-    <span id="popup-close">&times;</span>
-    <img id="popup-image">
-</div>   
-    
+<span id="popup-close">&times;</span>
+<img id="popup-image">
+</div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const popup = document.getElementById("popup");
-    const popupImg = document.getElementById("popup-image");
-    const closeBtn = document.getElementById("popup-close");
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-image");
+const closeBtn = document.getElementById("popup-close");
 
-    document.querySelectorAll(".img-box").forEach(box => {
-        box.addEventListener("click", () => {
-            const img = box.querySelector("img");
-            popup.style.display = "flex";
-            popupImg.src = img.src;
-        });
-    });
+document.querySelectorAll(".img-box").forEach(box => {
+box.addEventListener("click", () => {
+const img = box.querySelector("img");
+popup.style.display = "flex";
+popupImg.src = img.src;
+});
+});
 
-    closeBtn.onclick = () => popup.style.display = "none";
+closeBtn.onclick = () => popup.style.display = "none";
 
-    popup.onclick = e => {
-        if (e.target === popup) popup.style.display = "none";
-    };
+popup.onclick = e => {
+if (e.target === popup) popup.style.display = "none";
+};
 });
 </script>
 
@@ -77,27 +76,19 @@ document.addEventListener("DOMContentLoaded", () => {
 let startY = 0;
 
 document.getElementById("popup").addEventListener("touchstart", e => {
-    startY = e.touches[0].clientY;
+startY = e.touches[0].clientY;
 });
 
 document.getElementById("popup").addEventListener("touchend", e => {
-    let endY = e.changedTouches[0].clientY;
-    if (endY - startY > 80) {
-        document.getElementById("popup").style.display = "none";
-    }
+let endY = e.changedTouches[0].clientY;
+if (endY - startY > 80) {
+document.getElementById("popup").style.display = "none";
+}
 });
 </script>
-        
+
 </body>
-
-
-    
 </html>
-
-
-
-
-
 
 
 
