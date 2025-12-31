@@ -1,150 +1,98 @@
- body {
-
-    font-family: Tahoma, Arial;
-    margin: 0;
-    background: #f3f3f3;
-    direction: rtl;
+body {
+font-family: Tahoma, Arial;
+margin: 0;
+background: #f3f3f3;
+direction: rtl;
 }
 
 header {
-    background: #454a7b;
-    color: white;
-    text-align: center;
-    padding: 30px;
+background: #454a7b;
+color: white;
+text-align: center;
+padding: 30px;
 }
 
 .portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 30px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+padding: 30px;
 }
 
 .img-box {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
+background: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+text-align: center;
+cursor: zoom-in;
+position: relative;
 }
 
 .img-box img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+width: 100%;
+height: 200px;
+object-fit: cover;
+pointer-events: none; /* يمنع السحب والنسخ */
+user-select: none;
+-webkit-user-drag: none;
 }
 
 .img-box h3 {
-    margin: 10px 0 5px;
+margin: 10px 0 5px;
 }
 
 .img-box p {
-    color: #555;
-    padding-bottom: 15px;
+color: #555;
+padding-bottom: 15px;
 }
 
 footer {
-    background: #454a7b;
-    color: white;
-    text-align: center;
-
-    padding: 15px;
-}
-/* الصورة القابلة للتكبير */
-.popup-img {
-    cursor: zoom-in;
+background: #454a7b;
+color: white;
+text-align: center;
+padding: 15px;
 }
 
 /* نافذة التكبير */
 #popup {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-}
-
-/* الصورة داخل النافذة */
-#popup-image {
-    max-width: 90%;
-    max-height: 90%;
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
-}
-
-/* زر الإغلاق */
-#popup-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
-/* حماية الصور */
-.popup-img,
-.img-box img,
-#popup-image {
-    -webkit-user-drag: none;
-    user-drag: none;
-    user-select: none;
-    pointer-events: none;
-}
-
-.img-box {
-    position: relative;
-    cursor: zoom-in;
-}
-
-.img-box img {
- pointer-events: none; /* يمنع السحب والنسخ */
- user-select: none;
- -webkit-user-drag: none;
-}
-.img-box {
-    touch-action: manipulation;
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.85);
+z-index: 9999;
+justify-content: center;
+align-items: center;
 }
 
 #popup-image {
-    max-width: 95%;
-    max-height: 85%;
-    border-radius: 8px;
+max-width: 95%;
+max-height: 85%;
+border-radius: 8px;
+box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
 #popup-close {
-    top: 15px;
-    right: 20px;
-    padding: 10px;
+position: absolute;
+top: 15px;
+right: 20px;
+font-size: 40px;
+color: white;
+cursor: pointer;
+padding: 10px;
 }
 
-
-@media (max-width: 600px) {
-    .portfolio {
-        grid-template-columns: 1fr;
-        padding: 15px;
-    }
-
-    header h1 {
-        font-size: 22px;
-    }
-
-    header p {
-        font-size: 14px;
-    }
-/* الحاوية العامة للزر - لكل الشاشات */
+/* زر CTA - كل الشاشات */
 .cta-wrapper {
-display: flex; /* مهم جدًا ليظهر كزر */
-justify-content: center; /* وسط الصفحة */
+display: flex;
+justify-content: center;
 margin: 40px 0;
-position: relative; /* لضمان ظهور فوق العناصر */
-z-index: 1000; /* أعلى من الصور */
+position: relative;
+z-index: 1000;
 }
 
-/* الزر - لكل الشاشات */
 .cta-btn {
-display: inline-block; /* مهم جدًا ليظهر كزر */
+display: inline-block;
 background: linear-gradient(135deg, #2563eb, #1e40af);
 color: #fff;
 padding: 14px 32px;
@@ -161,10 +109,10 @@ transform: translateY(-3px);
 box-shadow: 0 15px 30px rgba(37, 99, 235, 0.5);
 }
 
-/* تعديلات الجوال */
+/* الجوال */
 @media (max-width: 768px) {
 .cta-wrapper {
-position: fixed; /* ثابت أسفل الشاشة */
+position: fixed;
 bottom: 15px;
 left: 50%;
 transform: translateX(-50%);
@@ -182,3 +130,18 @@ padding-bottom: 90px; /* يمنع تغطية المحتوى */
 }
 }
 
+/* للجوال الصغير */
+@media (max-width: 600px) {
+.portfolio {
+grid-template-columns: 1fr;
+padding: 15px;
+}
+
+header h1 {
+font-size: 22px;
+}
+
+header p {
+font-size: 14px;
+}
+}
